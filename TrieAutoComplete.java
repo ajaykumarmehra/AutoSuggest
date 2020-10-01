@@ -44,7 +44,7 @@ class TrieNode{
         return Parent.toString() + data;
     }        
 }
-
+// THIS IS A TRIE !!
 class Trie{
     private TrieNode root;
     public Trie(){
