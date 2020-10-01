@@ -125,7 +125,7 @@ public class TrieAutoComplete{
             inFile.close();
         }
         catch(Exception ft){
-            System.out.println("ERROR OPENING FILE");
+            System.out.println("ERROR OPENING FILE :: " + ft.getMessage());
         }
        
     }
