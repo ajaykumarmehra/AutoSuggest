@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.*;
+import java.lang;
+import java.math;
 class TrieNode{
     LinkedList<TrieNode> children;
     char data;
@@ -105,7 +107,7 @@ public class TrieAutoComplete{
                 String line = inFile.nextLine();
                 t.insert(line);
             }
-           ; String word;
+            String word;
             System.out.println("ENTER PREFIX TO BE SEARCHED ");
             Scanner inp = new Scanner(System.in);
             word = inp.nextLine();
@@ -113,7 +115,7 @@ public class TrieAutoComplete{
         
             List a = t.autocomplete(word);
             if (a.size() == 0)
-            	System.out.println("No Suggestions..");
+            	System.out.println("Empty Word Prefix No Suggestions..");
             int s;
             if(a.size()<6)
             	s = a.size();
@@ -125,7 +127,7 @@ public class TrieAutoComplete{
             inFile.close();
         }
         catch(Exception ft){
-            System.out.println("ERROR OPENING FILE");
+            System.out.println("ERROR OPENING FILE: EITHER FILE NAEM IS INCORRECT OR FILE IS CORRUPTED");
         }
        
     }
