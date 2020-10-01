@@ -80,7 +80,7 @@ class Trie{
             else
                 current = current.getChild(c);
         }
-        if(current.isEnd = true)
+        if(current.isEnd == true)
             return true;
         return false;    
     }
