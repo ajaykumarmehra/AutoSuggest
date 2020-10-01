@@ -112,7 +112,8 @@ public class TrieAutoComplete{
             Scanner inp = new Scanner(System.in);
             word = inp.nextLine();
             
-        
+        //int a , b , c;
+            
             List a = t.autocomplete(word);
             if (a.size() == 0)
             	System.out.println("Empty Word Prefix No Suggestions..");
