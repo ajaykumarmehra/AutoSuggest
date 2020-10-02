@@ -15,6 +15,7 @@ class TrieNode{
         data = c;
         children = new LinkedList<TrieNode>();
         isEnd = false;
+        System.out.println(data);
     }
 
     public TrieNode getChild(char c) {
