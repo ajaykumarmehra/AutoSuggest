@@ -112,6 +112,7 @@ public class TrieAutoComplete{
             Scanner inp = new Scanner(System.in);
             word = inp.nextLine();
             
+            System.out.println(word);
         //int a , b , c;
             
             List a = t.autocomplete(word);
