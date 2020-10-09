@@ -130,7 +130,7 @@ public class TrieAutoComplete{
             inFile.close();
         }
         catch(Exception ft){
-            System.out.println("ERROR OPENING FILE: EITHER FILE NAEM IS INCORRECT OR FILE IS CORRUPTED");
+            System.out.println("ERROR OPENING FILE :: " + ft.getMessage());
         }
        
     }
