@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.*;
+import java.lang;
+import java.math;
 class TrieNode{
     LinkedList<TrieNode> children;
     char data;
@@ -13,6 +15,7 @@ class TrieNode{
         data = c;
         children = new LinkedList<TrieNode>();
         isEnd = false;
+        System.out.println(data);
     }
 
     public TrieNode getChild(char c) {
@@ -42,7 +45,7 @@ class TrieNode{
         return Parent.toString() + data;
     }        
 }
-
+// THIS IS A TRIE !!
 class Trie{
     private TrieNode root;
     public Trie(){
@@ -78,7 +81,7 @@ class Trie{
             else
                 current = current.getChild(c);
         }
-        if(current.isEnd = true)
+        if(current.isEnd == true)
             return true;
         return false;    
     }
@@ -105,15 +108,17 @@ public class TrieAutoComplete{
                 String line = inFile.nextLine();
                 t.insert(line);
             }
-           ; String word;
+            String word;
             System.out.println("ENTER PREFIX TO BE SEARCHED ");
             Scanner inp = new Scanner(System.in);
             word = inp.nextLine();
             
-        
+            System.out.println(word);
+        //int a , b , c;
+            
             List a = t.autocomplete(word);
             if (a.size() == 0)
-            	System.out.println("No Suggestions..");
+            	System.out.println("Empty Word Prefix No Suggestions..");
             int s;
             if(a.size()<6)
             	s = a.size();
